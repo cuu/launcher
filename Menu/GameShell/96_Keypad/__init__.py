@@ -102,19 +102,19 @@ class KeypadPage(Page):
         
         self._keylabels = \
                 [#["Menu","1",self._ListFontObj,self._TextColor,[10,40]],
-                 ["Up",  "6",self._ListFontObj,self._TextColor,[60,100]],
-                 ["Down","7",self._ListFontObj,self._TextColor,[60,160]],
-                 ["Left","8",self._ListFontObj,self._TextColor,[10,130]],
-                 ["Right","9",self._ListFontObj,self._TextColor,[100,130]],
+                 ["Up",  "4",self._ListFontObj,self._TextColor,[60,100]],
+                 ["Down","5",self._ListFontObj,self._TextColor,[60,160]],
+                 ["Left","6",self._ListFontObj,self._TextColor,[10,130]],
+                 ["Right","7",self._ListFontObj,self._TextColor,[100,130]],
                  ["Backspace","1",self._ListFontObj,self._TextColor,[50,40]],
-                 ["PLUS", "2",self._ListFontObj,self._TextColor,[135,40]],
-                 ["MINUS","3",self._ListFontObj,self._TextColor,[170,40]],
-                 ["Select","4",self._ListFontObj,self._TextColor,[222,40]],
-                 ["Start", "5",self._ListFontObj,self._TextColor,[268,40]],
-                 ["Y"    , "10",self._ListFontObj,self._TextColor,[230,100]],
-                 ["A",     "11",self._ListFontObj,self._TextColor,[230,160]],
-                 ["X",     "12",self._ListFontObj,self._TextColor,[180,130]],
-                 ["B",     "13",self._ListFontObj,self._TextColor,[270,130]]
+                 #["PLUS", "2",self._ListFontObj,self._TextColor,[135,40]],
+                 #["MINUS","3",self._ListFontObj,self._TextColor,[170,40]],
+                 ["Select","2",self._ListFontObj,self._TextColor,[222,40]],
+                 ["Start", "3",self._ListFontObj,self._TextColor,[268,40]],
+                 ["Y"    , "8",self._ListFontObj,self._TextColor,[230,100]],
+                 ["A",     "9",self._ListFontObj,self._TextColor,[230,160]],
+                 ["X",     "10",self._ListFontObj,self._TextColor,[180,130]],
+                 ["B",     "11",self._ListFontObj,self._TextColor,[270,130]]
                 ]
         
         for i in self._keylabels:
@@ -152,8 +152,8 @@ class KeypadPage(Page):
         self._TestKeys["Y"] = 0
         self._TestKeys["A"] = 0
         self._TestKeys["B"] = 0
-        self._TestKeys["PLUS"] = 0 # shift+select
-        self._TestKeys["MINUS"] = 0 # shift + enter
+        #self._TestKeys["PLUS"] = 0 # shift+select
+        #self._TestKeys["MINUS"] = 0 # shift + enter
         self._TestKeys["Backspace"] = 0 #shift+Menu
         
         self._Quit = 0
@@ -188,6 +188,7 @@ class KeypadPage(Page):
 
         if event.key == CurKeys["Start"]:
             self._TestKeys["Start"] = 1
+    
 
         if event.key == pygame.K_KP_PLUS:
             self._TestKeys["PLUS"] = 1
