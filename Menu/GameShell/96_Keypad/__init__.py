@@ -265,7 +265,7 @@ class APIOBJ(object):
     def Init(self,main_screen):
         self._Page = KeypadPage()
         self._Page._Screen = main_screen
-        self._Page._Name ="Keypad"
+        self._Page._Name ="Keypad Tester"
         self._Page.Init()
         
     def API(self,main_screen):
