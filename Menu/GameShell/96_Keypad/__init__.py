@@ -166,7 +166,7 @@ class KeypadPage(Page):
             else:
                 self._Quit = 0
 
-            if self._Quit > 0:
+            if self._Quit > 4:
                 self.ReturnToUpLevelPage()
                 self._Screen.Draw()
                 self._Screen.SwapAndShow()
